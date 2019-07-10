@@ -1,0 +1,36 @@
+resources:
+  - name: build_info_nuget
+    type: BuildInfo
+    configuration:
+      sourceArtifactory:    artdisha
+      buildName:            nugetTry
+      buildNumber:          1
+
+  - name:       release_bundle
+    type:       ReleaseBundle
+    configuration:
+      sourceArtifactory:    artdisha
+      name:                 release1
+      version:              1.0.0
+      isSigned:             true
+      
+pipelines:
+  - name:    distribute
+    steps:
+      - name: my_distribute
+        type: DistributeReleaseBundle
+        configuration:
+          dryRun: true
+          inputResources:
+            - name: release_bundle 
+              trigger: false   
+ 
+        execution:
+          onStart:
+            - echo "Preparing for work..."
+          onSuccess:
+            - echo "Job well done!"
+          onFailure:
+            - echo "uh oh, something went wrong"
+          onComplete: #always
+            - echo "Cleaning up some stuff"
