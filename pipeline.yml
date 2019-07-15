@@ -26,11 +26,11 @@ resources:
     type:           DistributionRule
     configuration:
       sourceArtifactory:    artdisha
-      serviceName:          Art2
-      siteName:             MC_Site
-      cityName:             Bengaluru
+      serviceName:          *
+      siteName:             *
+      cityName:             *
       countryCodes:
-        - IN
+        - *
      
       
 pipelines:
