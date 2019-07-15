@@ -20,6 +20,9 @@ resources:
       sourceArtifactory:    artdisha
       serviceName:          Art2
       siteName:             MC_Site
+      cityName:             Bengaluru
+      countryCodes:
+        - IN
      
       
 pipelines:
