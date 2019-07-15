@@ -41,7 +41,7 @@ pipelines:
         configuration:
           inputResources:
             - name:            release_bundle 
-              trigger: false
+              trigger: true
           outputResources:
             - name:            release_bundle_new
       - name: my_distribute
@@ -50,7 +50,7 @@ pipelines:
           dryRun: true
           inputResources:
             - name: release_bundle_new
-              trigger: false
+              trigger: true
             - name: Rule1
               trigger: true
  
