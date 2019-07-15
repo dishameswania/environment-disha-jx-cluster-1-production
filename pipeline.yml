@@ -14,6 +14,14 @@ resources:
       version:              1.0.0
       isSigned:             true
       
+  - name:       release_bundle_new
+    type:       ReleaseBundle
+    configuration:
+      sourceArtifactory:    artdisha
+      name:                 release1
+      version:              1.0.0
+      isSigned:             true
+      
   - name:           Rule1
     type:           DistributionRule
     configuration:
@@ -28,6 +36,14 @@ resources:
 pipelines:
   - name:    distribute
     steps:
+      - name: sign
+        type: SignReleaseBundle
+        configuration:
+          inputResources:
+            - name:            release_bundle 
+              trigger: false
+          outputResources:
+            - name:            release_bundle_new
       - name: my_distribute
         type: DistributeReleaseBundle
         configuration:
