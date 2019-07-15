@@ -56,7 +56,7 @@ pipelines:
  
         execution:
           onStart:
-            - echo "Preparing for work..."
+            - echo "Preparing for work...."
           onSuccess:
             - echo "Job well done!"
           onFailure:
