@@ -26,7 +26,7 @@ resources:
     type:           DistributionRule
     configuration:
       sourceArtifactory:    artdisha
-      serviceName:          *
+      serviceName:          A*
       siteName:             *
       cityName:             *
       countryCodes:
