@@ -10,15 +10,15 @@ resources:
     type:       ReleaseBundle
     configuration:
       sourceArtifactory:    artdisha
-      name:                 release1
+      name:                 release2
       version:              1.0.0
-      isSigned:             true
+      isSigned:             false
       
   - name:       release_bundle_new
     type:       ReleaseBundle
     configuration:
       sourceArtifactory:    artdisha
-      name:                 release1
+      name:                 release2
       version:              1.0.0
       isSigned:             true
       
