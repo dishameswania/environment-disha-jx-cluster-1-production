@@ -14,6 +14,14 @@ resources:
       version:              1.0.0
       isSigned:             true
       
+  - name:           Rule1
+    type:           DistributionRule
+    configuration:
+      sourceArtifactory:    artdisha
+      serviceName:          Art2
+      siteName:             MC_Site
+     
+      
 pipelines:
   - name:    distribute
     steps:
@@ -23,7 +31,9 @@ pipelines:
           dryRun: true
           inputResources:
             - name: release_bundle 
-              trigger: false   
+              trigger: false
+            - name: Rule1
+              trigger: true
  
         execution:
           onStart:
