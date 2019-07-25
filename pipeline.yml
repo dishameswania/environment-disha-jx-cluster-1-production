@@ -30,7 +30,7 @@ resources:
       siteName:             MC_Site
       cityName:             Bengaluru
       countryCodes:
-        - IN
+        - MC_Site
      
       
 pipelines:
