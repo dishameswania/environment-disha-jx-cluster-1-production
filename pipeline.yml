@@ -50,12 +50,12 @@ pipelines:
       - name: my_distribute
         type: DistributeReleaseBundle
         configuration:
-          dryRun: false
+          dryRun: true
           inputResources:
             - name: release_bundle_new
               trigger: false
             - name: Rule1
-              trigger: true
+              trigger: false
  
         execution:
           onStart:
