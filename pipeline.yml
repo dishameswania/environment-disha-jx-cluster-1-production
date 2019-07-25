@@ -14,6 +14,14 @@ resources:
       version:              1.0.0
       isSigned:             false
       
+  - name:       release_bundle_new
+    type:       ReleaseBundle
+    configuration:
+      sourceDistribution:    dist
+      name:                 release3
+      version:              1.0.0
+      isSigned:             true
+      
   - name:           Rule1
     type:           DistributionRule
     configuration:
@@ -33,7 +41,9 @@ pipelines:
         configuration:
           inputResources:
             - name:            release_bundle  
-              trigger: true 
+              trigger: true
+          outputResources:
+            - name:  release_bundle_new
             
   - name:    distribute
     steps:
