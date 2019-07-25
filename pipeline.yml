@@ -45,8 +45,6 @@ pipelines:
           outputResources:
             - name:  release_bundle_new
             
-  - name:    distribute
-    steps:
       - name: my_distribute
         type: DistributeReleaseBundle
         configuration:
