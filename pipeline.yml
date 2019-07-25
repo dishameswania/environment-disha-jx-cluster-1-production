@@ -10,9 +10,9 @@ resources:
     type:       ReleaseBundle
     configuration:
       sourceDistribution:    dist
-      name:                 release2
+      name:                 release3
       version:              1.0.0
-      isSigned:             true
+      isSigned:             false
       
   - name:           Rule1
     type:           DistributionRule
@@ -26,6 +26,15 @@ resources:
      
       
 pipelines:
+  - name:   sign
+    steps:
+      - name: sign_release
+        type: SignReleaseBundle
+        configuration:
+          inputResources:
+            - name:            release_bundle  
+              trigger: true 
+            
   - name:    distribute
     steps:
       - name: my_distribute
