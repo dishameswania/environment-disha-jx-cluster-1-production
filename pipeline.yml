@@ -52,7 +52,7 @@ pipelines:
         configuration:
           dryRun: false
           inputResources:
-            - name: release_bundle
+            - name: release_bundle_new
               trigger: false
             - name: Rule1
               trigger: true
