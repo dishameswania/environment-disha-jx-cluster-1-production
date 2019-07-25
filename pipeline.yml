@@ -10,7 +10,7 @@ resources:
     type:       ReleaseBundle
     configuration:
       sourceDistribution:    dist
-      name:                 release3
+      name:                 release4
       version:              1.0.0
       isSigned:             false
       
@@ -18,7 +18,7 @@ resources:
     type:       ReleaseBundle
     configuration:
       sourceDistribution:    dist
-      name:                 release3
+      name:                 release4
       version:              1.0.0
       isSigned:             true
       
