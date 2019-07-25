@@ -27,10 +27,10 @@ resources:
     configuration:
       sourceDistribution:    dist
       serviceName:          Art2
-      siteName:             MC_Site
+      siteName:             IN
       cityName:             Bengaluru
       countryCodes:
-        - MC_Site
+        - IN
      
       
 pipelines:
